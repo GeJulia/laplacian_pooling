@@ -217,24 +217,25 @@ class ResNet(nn.Module):
 
 
 def resnet18(pretrained=False, filter_size=5, pool_only=True, _force_nonfinetuned=False, sigma=1, **kwargs):
+    """Constructs a ResNet-18 model"""
     model = ResNet(BasicBlock, [2, 2, 2, 2], filter_size=filter_size, pool_only=pool_only, sigma=sigma, **kwargs)
     return model
 
 
 def resnet34(pretrained=False, filter_size=5, pool_only=True, _force_nonfinetuned=False, sigma=1, **kwargs):
-
+    """Constructs a ResNet-34 model"""
     model = ResNet(BasicBlock, [3, 4, 6, 3], filter_size=filter_size, pool_only=pool_only, sigma=sigma, **kwargs)
     return model
 
 
 def resnet50(pretrained=False, filter_size=5, pool_only=True, _force_nonfinetuned=False, sigma=1, **kwargs):
+    """Constructs a ResNet-50 model"""
     model = ResNet(Bottleneck, [3, 4, 6, 3], filter_size=filter_size, pool_only=pool_only, sigma=sigma, **kwargs)
     return model
 
 
 def resnet101(pretrained=False, filter_size=5, pool_only=True, _force_nonfinetuned=False, sigma=1, **kwargs):
-    """Constructs a ResNet-101 model
-    """
+    """Constructs a ResNet-101 model"""
     model = ResNet(Bottleneck, [3, 4, 23, 3], filter_size=filter_size, pool_only=pool_only, sigma=sigma, **kwargs)
     return model
 
